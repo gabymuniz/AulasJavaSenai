@@ -16,6 +16,7 @@ public class SomaElementosVetor {
         for (int i = 0; i < numeros.length; i++) {
             res += numeros[i];
         }
+
         System.out.println("Vetor preenchido: " + Arrays.toString(numeros));
         System.out.println("Soma dos numeros: " + res);
     }
