@@ -3,10 +3,11 @@ package aulas.encapsulamento.banco.modelo;
 import static java.lang.Integer.MAX_VALUE;
 
 public class ContaBancaria {
+    private static int contadorDeContas = 1000;
     //Atributos dessa classe
 
-    private String titular;
-    private int[] numeroConta = new int[10000];
+    private final String titular;
+    private final int numeroConta;
     private double saldo;
 
 
@@ -15,9 +16,8 @@ public class ContaBancaria {
         this.titular = titular;
         this.saldo = 0;
 
-        for(int i = 1; i < numeroConta.length; i++) {
-            this.numeroConta[i] += i;
-        }
+        contadorDeContas++;
+        this.numeroConta = contadorDeContas;
     }
 
     //Métodos Getters e Setters
@@ -27,11 +27,11 @@ public class ContaBancaria {
         return titular;
     }
 
-    public void setTitular(String titular) {
-        this.titular = titular;
-    }
+    //public void setTitular(String titular) {
+      //  this.titular = titular;
+   // }
 
-    public int[] getNumeroConta(){
+    public int getNumeroConta(){
         return numeroConta;
     }
 
