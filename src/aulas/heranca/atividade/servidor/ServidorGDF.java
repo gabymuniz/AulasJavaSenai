@@ -7,11 +7,19 @@ public class ServidorGDF {
     private String matricula;
 
 
-    public static void trabalhar(){
+    public void trabalhar() {
 
     }
 
-    public static void baterPonto(){
+    public void baterPonto() {
+
+    }
+
+    public void corrigirProvas() {
+
+    }
+
+    public void fazerRonda() {
 
     }
 
